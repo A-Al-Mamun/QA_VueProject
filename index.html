@@ -12,7 +12,17 @@
 </head>
 <body>
     <div id="app">
-        
+        <h1>Question and Answer</h1>
+
+        <div class="qa-body" v-for="t in modelTest">
+            <span>{{ t.quiz }}</span>
+            <div class="op" v-for="o in option">
+                <button >A : {{ o.a }}</button>
+                <button >A : {{ o.b }}</button>
+                <!-- <button >B : {{ o.A }}</button> -->
+            </div>
+            <br><br><hr><br><br>
+        </div>
     </div>
 
     <script src="app.js"></script>
