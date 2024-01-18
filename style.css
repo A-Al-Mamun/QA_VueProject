@@ -4,7 +4,17 @@
     box-sizing: border-box;
 }
 
-#app{}
+#app{padding: 50px 50px;}
 
+.qa-body{
+    margin-top: 50px;
+}
+.op{
+    margin: 10px 0;
+}
+.op button{
+    margin: 0 10px;
+    padding: 5px;
+}
 
 
