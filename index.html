@@ -17,14 +17,14 @@
         <div class="qa-body" v-for="q in modelTest">
             <span>{{ q.quiz }}</span><br>
             
-            <div class="op" v-for="o in option">
-                <button :class="myClass" @click="quizAns(o.A)">A : {{ o.A }}</button>
-                <button :class="myClass" @click="quizAns(o.B)">B : {{ o.B }}</button>
-                <button :class="myClass" @click="quizAns(o.C)">C : {{ o.C }}</button>
-                <button :class="myClass" @click="quizAns(o.D)">D : {{ o.D }}</button>
+            <div class="op" >
+                <button :class="myClass" @click="quizAns(q.A)" @keyup="quizAns">A : {{ q.A }}</button>
+                <button :class="myClass" @click="quizAns(q.B)">B : {{ q.B }}</button>
+                <button :class="myClass" @click="quizAns(q.C)">C : {{ q.C }}</button>
+                <button :class="myClass" @click="quizAns(q.D)">D : {{ q.D }}</button>
                 
             </div>
-            <span>Correction : {{ isCorrect }}</span>
+            <span v-bind="quizAns">Correction : {{ isCorrect }}</span>
             <hr>
         </div>
     </div>
