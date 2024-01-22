@@ -2,6 +2,8 @@
     data(){
         return {
             isCorrect: null,
+            myClass: "",
+            A: null,
             modelTest: [
                 {
                     quiz: "Which is correct for Vue js ?", 
@@ -20,7 +22,13 @@
     },
     methods: {
         quizAns(e) {
-            console.log(this.option.A = e.target.value);
+            for(item in this.modelTest){
+                if(e == 'Framework'){
+                    console.log("True")
+                }else {
+                    console.log("False");
+                }
+            }
         },
     },
     watch: {

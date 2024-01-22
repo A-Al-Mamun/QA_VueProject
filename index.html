@@ -18,10 +18,10 @@
             <span>{{ q.quiz }}</span><br>
             
             <div class="op" v-for="o in option">
-                <button @click="quizAns">A : {{ o.A }}</button>
-                <button @click="quizAns">B : {{ o.B }}</button>
-                <button @click="quizAns">C : {{ o.C }}</button>
-                <button @click="quizAns">D : {{ o.D }}</button>
+                <button :class="myClass" @click="quizAns(o.A)">A : {{ o.A }}</button>
+                <button :class="myClass" @click="quizAns(o.B)">B : {{ o.B }}</button>
+                <button :class="myClass" @click="quizAns(o.C)">C : {{ o.C }}</button>
+                <button :class="myClass" @click="quizAns(o.D)">D : {{ o.D }}</button>
                 
             </div>
             <span>Correction : {{ isCorrect }}</span>
