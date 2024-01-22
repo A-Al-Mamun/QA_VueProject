@@ -1,39 +1,36 @@
  let app = Vue.createApp({
     data(){
         return {
+            isCorrect: null,
             modelTest: [
                 {
                     quiz: "Which is correct for Vue js ?", 
-                    ans: 'Framework', 
+                    ans: 'Framework'
+                },
+            ],
+            option: [
+                {
                     A: 'Library', 
                     B: 'Framework', 
                     C: 'Operation',
                     D: 'Software'
-                },
-                {
-                    quiz: "Vue is created by ?", 
-                    ans: 'JavaScript',
-                    A: 'PHP', 
-                    B: 'HTML', 
-                    C: 'JavaScript',
-                    D: 'Python'
-                },
-                {
-                    quiz: "Who is vue invented ?", 
-                    ans: 'evan you',
-                    A: 'Bill Gates', 
-                    B: 'Even You', 
-                    C: 'Brendan Eich',
-                    D: 'Jordan'
-            },
-            ],
-            option: [
-                {a: "Library", b: "Framework"},
+                }
             ]
         }
     },
     methods: {
-        
+        quizAns(e) {
+            console.log(this.option.A = e.target.value);
+        },
+    },
+    watch: {
+        correction(){
+            if(isCorrect == true){
+                return "Correct";
+            }else{
+                return "Incorrect";
+            }
+        }
     }
 });
 

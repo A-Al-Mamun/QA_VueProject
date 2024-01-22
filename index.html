@@ -14,16 +14,17 @@
     <div id="app">
         <h1>Question and Answer</h1>
 
-        <div class="qa-body" v-for="o in modelTest">
-            <span>{{ o.quiz }}</span><br>
+        <div class="qa-body" v-for="q in modelTest">
+            <span>{{ q.quiz }}</span><br>
             
-            <div class="op" >
-                <button>A : {{ o.A }}</button>
-                <button>B : {{ o.B }}</button>
-                <button>C : {{ o.C }}</button>
-                <button>D : {{ o.D }}</button>
-                <!-- <button >B : {{ o.A }}</button> -->
+            <div class="op" v-for="o in option">
+                <button @click="quizAns">A : {{ o.A }}</button>
+                <button @click="quizAns">B : {{ o.B }}</button>
+                <button @click="quizAns">C : {{ o.C }}</button>
+                <button @click="quizAns">D : {{ o.D }}</button>
+                
             </div>
+            <span>Correction : {{ isCorrect }}</span>
             <hr>
         </div>
     </div>
