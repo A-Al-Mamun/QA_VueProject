@@ -14,11 +14,11 @@
     <div id="app">
         <h1>Question and Answer</h1>
 
-        <div class="qa-body" v-for="q in modelTest">
+        <div class="qa-body" v-for="(q, index) in modelTest">
             <span>{{ q.quiz }}</span><br>
             
-            <div class="op" >
-                <button :class="myClass" @click="quizAns(q.A)" @keyup="quizAns">A : {{ q.A }}</button>
+            <div class="op">
+                <button :class="myClass" @click="quizAns(q.A)">A : {{ q.A }}</button>
                 <button :class="myClass" @click="quizAns(q.B)">B : {{ q.B }}</button>
                 <button :class="myClass" @click="quizAns(q.C)">C : {{ q.C }}</button>
                 <button :class="myClass" @click="quizAns(q.D)">D : {{ q.D }}</button>

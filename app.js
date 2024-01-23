@@ -12,43 +12,46 @@
                     C: 'Operation',
                     D: 'Software'
                 },
-                {
-                    quiz: "Who is invented Vue ?", 
-                    ans: 'Evan You',
-                    A: 'Gates', 
-                    B: 'Brenden', 
-                    C: 'Evan You',
-                    D: 'Mamun'
-                },
-                {
-                    quiz: "Who is create this ?", 
-                    ans: 'A.A.Mamun',
-                    A: 'Rahim', 
-                    B: 'Karim', 
-                    C: 'Robert',
-                    D: 'A.A.Mamun'
-                },
+                // {
+                //     quiz: "Who is invented Vue ?", 
+                //     ans: 'Evan You',
+                //     A: 'Gates', 
+                //     B: 'Brenden', 
+                //     C: 'Evan You',
+                //     D: 'Mamun'
+                // },
+                // {
+                //     quiz: "Who is create this ?", 
+                //     ans: 'A.A.Mamun',
+                //     A: 'Rahim', 
+                //     B: 'Karim', 
+                //     C: 'Robert',
+                //     D: 'A.A.Mamun'
+                // },
             ],
             
         }
     },
     methods: {
         quizAns(e) {
-            // for(item in this.modelTest){
+            for((item) in this.modelTest){
                 if(e == 'Framework'){
                     this.isCorrect = "Correct";
-                    
+                    console.log(item);
+                    this.myClass = 'correct'
                     // this.isCorrect = this.modelTest[item].ans;
                 }else if(e == 'Evan You'){
                     this.isCorrect = "Correct";
+                    console.log(item);
                     // this.isCorrect = this.modelTest[item].ans;
                 }else if(e == 'A.A.Mamun'){
                     this.isCorrect = "Correct";
+                    console.log(item);
                     // this.isCorrect = this.modelTest[item].ans;
                 }else {
                     this.isCorrect = "False";
                 }
-            // }
+            }
         },
     },
     watch: {
